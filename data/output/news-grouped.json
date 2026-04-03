@@ -1,0 +1,445 @@
+{
+  "generatedAt": "2026-04-02T20:00:05.473Z",
+  "totalNewsCount": 34,
+  "companies": [
+    {
+      "company": "Micron",
+      "count": 29,
+      "news": [
+        {
+          "title": "【21:30 即時新聞】Micron Technology(MU) 急挫逾7%／AI 記憶體需求前景再遭情緒性修正 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNUdrWjI1aW56ZGliYmw1cldtUW9ybDh3ZjNTSU5RSzVXYnRibW05QnpqdUlCN2dmendzQUZxT2F2eHFhb1ZMMF8xMjdvOWw1a1RGNHQ3a2JFQWdVWmpQYTlpay1DbmFZMDN2WDJZQV9GVmU2OURrX1N1NzJNa19VLXAzU1RDclF0aU82OTRB?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 13:30:32 GMT",
+          "source": "Google News",
+          "keyword": "Micron",
+          "importance": "high"
+        },
+        {
+          "title": "AI熱潮下的隱形贏家與受傷股：從Micron到Tesla、美股科技新局勢全面剖析 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQOGZHNUthR0I2RGthTWxFU0VNQ2NOUHYtRlFKcjlYSHM0aEQ0SmJ2LW45anFVMFUyVnZycjVlWEhFOWFFdDVyNXl4MXZvc3BXajB6bjQ5N09XVG92TjlzNUozMWo5SDBVRTJrczcxRW1QTm5hQ2szbnlBMkQxdDJiSUVDRWlkczRpYWZBZlVn?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 18:00:36 GMT",
+          "source": "Google News",
+          "keyword": "Micron",
+          "importance": "high"
+        },
+        {
+          "title": "記憶體血洗被錯殺？美光目標價遭重砍17％ DDR5報價致命傷 - 財訊",
+          "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE96cDk3aG5sbDBBbU03Q1doU1Bwdk9DZ3lJdUhMb01zY1kzR25VYW5qZ0dQWktVaTE2XzI2NVZQTmNpekRkUnoxQmQtZWJjNWYzYThHWnNQZ2pxTnhvV25RSXZvdjI1NWJJZ0VfMGFuRTY3Y0RLaFk1SFQwVQ?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 03:30:14 GMT",
+          "source": "Google News",
+          "keyword": "Micron",
+          "importance": "low"
+        },
+        {
+          "title": "記憶體股全面反攻 美光飆漲9% 創一年最大漲幅 - AASTOCKS.com",
+          "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE81RTFmUng3YkpONjZlOXIwc0ZaSTJXSmpkTm9VdVBfeThRMW94eEZBTlBZWU8yV0p2LW5HcFB3c0MzLWZZcGs5aTUzN2p1d2VTWnZBbFVVN0JSenNvWkQ0WDdLT1o0UldHZ1pROQ?oc=5",
+          "pubDate": "Wed, 01 Apr 2026 22:00:00 GMT",
+          "source": "Google News",
+          "keyword": "Micron",
+          "importance": "low"
+        },
+        {
+          "title": "奧地利第一儲蓄下調美光科技(MU.US)至持有評級 - 富途牛牛",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOWnhjSU94YlVjQTNWc2JrdFhKYUtvVDJvZzJ6Xzk0c2E2VGQwdkh0bExBVkZzMEhFZ1JlenJ1Ry14cG5TbWJVdXZvWFVoaUxzSjJCWFd1eXBVTzRZNmtfTFhCd0VvUlNUU3NkMWItWmxaWU1YWHljbmxKWjdTazkyTTh6VlBUYzMwRk9JN21LNWFIUmlvR1YzN2xQanJ5X0xNLTBZ?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 14:36:51 GMT",
+          "source": "Google News",
+          "keyword": "Micron",
+          "importance": "low"
+        },
+        {
+          "title": "NYMEX:CL1!圖表圖片，作者：mu-NG1 - TradingView",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5HZnJzcVdsOTNyZnNucjBiVmpac2FXNm51YVRIUUJxTmVpZXRRT2k0RlVFcmdnLTZ4SEpIdFBjaDk0amVWdnloX2JaRWp5Z0E?oc=5",
+          "pubDate": "Wed, 01 Apr 2026 22:59:42 GMT",
+          "source": "Google News",
+          "keyword": "MU",
+          "importance": "low"
+        },
+        {
+          "title": "【即時新聞】美光(MU)受地緣衝擊開盤重挫逾7%，AI新技術恐削弱記憶體需求！ - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNVVBDamNtM0l0TzhQVXI3ZEVWX083UlZCZ1YtVG1qUGVkM003N2FYRktrdDE0RHVTeDcxY1JSSS1KeWE2NGh1cGpKdVpIQTEybVZjR1lFOXBQTGJyT0xFa0o4OFAzSERHaTY0MXk5eFdVLVl1TEQ3YzVyV19kTmVqT3BHY1V1NTByMll5a2JfWEo?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 17:44:54 GMT",
+          "source": "Google News",
+          "keyword": "MU",
+          "importance": "high"
+        },
+        {
+          "title": "川普TACO交易逆轉？WTI原油、LME鋁、比特幣、美光科技（MU）技術分析 - mitrade.com",
+          "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1nMVFGNHdmak9uRTFYVG9nWERvSTRsSTV1cThtd3FKalI3dllFdmdMb0hPcFJmbTQydWdXMFJvRnpHOVFic0JWTFMyR0U1cjVpZTFGU2VYQS1QOUZwb0xlQnhmZ3N0dHgxbUpCVGhDeFZBWHBQQjVQbk5B?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 15:08:58 GMT",
+          "source": "Google News",
+          "keyword": "MU",
+          "importance": "medium"
+        },
+        {
+          "title": "【即時新聞】美光(MU)遭花旗砍目標價至425美元，AI記憶體狂潮要反轉了？ - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOSkhuQklIR0RWMEpoMmNJVDUxR2planc2c3FjT0FlRWtfR2gzSS1kQ2JiR3VfMGNyQnpCOXFGQUtHTHc3anVRMWhOcVFEUUFWM0VTbm5tV1owYzlPYnNHUGM0cjI0dndhTkczZVZPWXBONzNMRGZkNnNFQTJidmktM3VaUFZyQ3hlZU5oMWpnVDU?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 18:45:50 GMT",
+          "source": "Google News",
+          "keyword": "MU",
+          "importance": "high"
+        },
+        {
+          "title": "【即時新聞】MU最新盤中爆量轉強飆逾9%，半年大漲101%還能追嗎？ - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNdUpGeEpaZ0MxdmhhWU9xSzRSWlFUUkgwWWpBcm80X0J6NlN4bmFRZmttRFNLV2pQeE03NDdtRU03VXdhNm5WVGVwY2djSDZzWFlGUTd5djlKd1NHZWNndjVIUk9ucEpTV0FkaUxJQW5FTTBhaklZUjVfRDhNZDBtN2JDZTVRS1YxQXNCb0VWMFY?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 14:16:59 GMT",
+          "source": "Google News",
+          "keyword": "MU",
+          "importance": "high"
+        },
+        {
+          "title": "【即時新聞】地緣政治趨緩帶動美光(MU)狂飆近9%！市場無懼Alphabet新AI技術衝擊 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPV2pPT0FWS2ZyUGJLcFpuYzZ4SnYzaUtkTzhiZWg4dGg4ZGFLNWI0NjRfWXVlU1Z4djdCTnpJTE1uNmFHUHlOLUlqb2hpaGVQLV8tQ0ZwQllTRDA3Y2ZLWVU3RDdDcnVwWWRhRnFHcmFRejlYUGdaSTFjRExDTFFCd2pDX0ZHNVo5MHEzWVk4Y3Q?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 01:49:17 GMT",
+          "source": "Google News",
+          "keyword": "MU",
+          "importance": "high"
+        },
+        {
+          "title": "美光連兩日飆漲 市場在反映什麼？ - AASTOCKS.com",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQS0hSNGEwM2xwN3FXZnJUbjhCWkR1VHU4NF9nTVotbEk4MFhZcjdyWXgtZnR6MmR2U19BUmZyS09PMS1OU3Y4N1ZMVjNUUW53RV9OSklmLVMzUWtMSC1fRnU1WGVQQnNweGhPZ2MxY3VvcFBueWZuM3VjNElxTlNCZWlrN044bVQ3Ykx0R0JzQjYxVEpCbkNqNXlmUQ?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 04:00:00 GMT",
+          "source": "Google News",
+          "keyword": "MU",
+          "importance": "medium"
+        },
+        {
+          "title": "美光、Sandisk 嗨 華強北 DDR5 跌價只因溢價過高？ - TechNews 科技新報",
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOSkJncjM2OGxWTW9Fak1BTHpxTnhONGlqZGlEVkdsTHE0Q21hMEpPNGotRkk5VFRvblBvYU5KVkFVdlhWMUZzcnRsaWR1c05ZS1kzVUNETG96Sk5pU2pUOENucDdTcUVHZnczWkpwaGNxeVI1aXFyVi1aczQ3SUYwQTVrQjVmX196MEFWSjk2cm5SV3RDNDhROENIVHZzOVY0bTliSGF4UUJJNVd4?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 01:42:03 GMT",
+          "source": "Google News",
+          "keyword": "美光",
+          "importance": "low"
+        },
+        {
+          "title": "美光噴發也難救？ 南亞科翻黑兩檔「解禁」多空互搏- 上市櫃 - 旺得富理財網",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9vUjhZQjNBempfc2tZWWIyOWdnTnhPVjBDdllrWTM5VFpGN0NRMGdEWDhaekNlUjdDbXRaaUhCakpOQnFQOEhkbEc5X1VGN0hVZG42SWlUQXpESW1jVUFYNGZNNUFJSUd3dVE?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 02:45:22 GMT",
+          "source": "Google News",
+          "keyword": "美光",
+          "importance": "low"
+        },
+        {
+          "title": "美光狠砸1.4兆投資！ 助攻 AI 新十大建設政策 - 經濟日報",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA1cWRKV01iLTlKalhFbE10aWRHOVJyS0VEbFJJaXpodF9wTzZ3RDNkVFlqeWhMNElJcDlFVnc3akRjS1p1Zm00OFNBclowQnlpYXdheXpEVTM4QdIBX0FVX3lxTE1rRW9QZjNZQ0tocmJxWU5CVkNLNnAzNW5OZzl0ZHBNOW1ZUVBJUVpIaW12WXRpNlViNXUyOWJobW9ra3FRSWh6YXBUZkh3cU5pNUxGMXpNMG9LZHJ6QVJV?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 04:33:36 GMT",
+          "source": "Google News",
+          "keyword": "美光",
+          "importance": "high"
+        },
+        {
+          "title": "美光認為近期市場雜音影響有限，預期 2027 年 EPS 上看 100 美元 - TechNews 科技新報",
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSzdpTkZocHFpeHBnbnExYzZyVUwycFl0QWhfYWxmNnI3alp0OHZaWnR0X2ZnWUlpQXotVHF6dnRWSTBUZ21IUlRJcmUyTDRQeERGcmZxbmFvZC1QLWlpa1ZKTmkzbDl4X1NkOGUtaTEyYnA5WEphN2Y2aE1uT1ZpWXc5RlhOZ0loZHlhQzVHOTJaby1nOE0wREtPSnhLd0hEODlz?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 06:42:41 GMT",
+          "source": "Google News",
+          "keyword": "美光",
+          "importance": "medium"
+        },
+        {
+          "title": "美光、Sandisk嗨 華強北DDR5跌價只因溢價過高？ - MoneyDJ理財網",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQWHozc2E3YjF3MERTZ2J0RDR5Zjdramd2V1NGODJNdWhlS0JZdjM0U1o5NmpJR3NqLWZQYjNPT1o3M2NTMDFMNTJlZE9VQU9ITTZXQ0llVElnZHlmWm91MXVRZTJCLW1XUUpvSTBnLXVGU2F0Mmw4aVBIMlJYZzEtYzh6RTVPY1JFNDNnZkF0VXVldw?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 00:48:00 GMT",
+          "source": "Google News",
+          "keyword": "美光",
+          "importance": "low"
+        },
+        {
+          "title": "記憶體股全面反攻 美光飆漲9% 創一年最大漲幅 - news.cnyes.com",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9hQUExaEg2UU1RTlEyUTRXVVBXOXBpYWVSeHZlUHNSX3VXenVlb0JwUlRQQjFQeW5jZnRsVWhLd2paa2gydUhZZ0tlRWE4OXc?oc=5",
+          "pubDate": "Wed, 01 Apr 2026 22:01:43 GMT",
+          "source": "Google News",
+          "keyword": "美光",
+          "importance": "low"
+        },
+        {
+          "title": "釋疑雜音美光：AI記憶體持續支撐獲利- 日報 - 工商時報",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE15bXJhSmtnd3BudXBjb2VCNFJ4R2taZ190bG5jcUdYeDkyRHo0RFpCYm1oZDZBLTZjQS1EbkxTcl9yMjN0REs5ZFctMkRmcTR0REF3TDdwQ3ZkY196Y2RN?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 19:00:00 GMT",
+          "source": "Google News",
+          "keyword": "美光",
+          "importance": "low"
+        },
+        {
+          "title": "記憶體晶片打破華爾街質疑，美光飆漲9% 創一年最大漲幅 - TradingKey",
+          "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQR3NCdkxjNms5WTBXdFpjMUp6TGxaVUNDMndOalBTY1Z6WGFrbEtsUXVpQ1dzbUpvRWkwVGpyeEhOM19mWjV3X1lfcUhLSnhYWU5sZUhHOXdySEw5YWRvZ0Y4S1psc1VUUXpNN1Y5WktGLVlZdUNRc2htc2NPWjBCRnRuTUhaNlJIZjZDRFNQaVFCdEFRM3BoZFVqcUdMVDZHOEt2U0Z5X3o4QjNFZDlxXzZTc1pFWGk0SFJaU0VNY0dITFE4UnBRak5tYw?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 07:04:35 GMT",
+          "source": "Google News",
+          "keyword": "美光",
+          "importance": "low"
+        },
+        {
+          "title": "美光狠砸1.4兆投資！ 助攻 AI 新十大建設政策 - 聯合新聞網",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE13N1VTcUowb1QxcjBoOExIbE9CbWx3MlprQjhHdURGOWJQV29rc3JaV2t6WTJyNmtVZF9vU2RPSE5zTk1GQWlIUTRHTV9vbUpF0gFWQVVfeXFMTnFUa2VTVmpoNXprNU1ZN0VfalZfNjdySWkzLURLakxIbVdMbUptM2t3RjNfcFJBNl8zbktoWnBWQlpfZjJCbWQyTUsxdUxVemNnaHA4Y3c?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 04:33:31 GMT",
+          "source": "Google News",
+          "keyword": "美光",
+          "importance": "high"
+        },
+        {
+          "title": "​南市增美光、台鐵兩安衛家族 大廠帶小廠傳承職安 - 中華日報",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1VZDU5WVh6TXN0aXdNejl4d1NaclppZmhfallqUTFLUzZnVUpReWVEYVZsOTBiLTJxX3ZwWklxeUFPWWF0cGpMSEx1dHBDZEsxYXc?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 05:27:30 GMT",
+          "source": "Google News",
+          "keyword": "美光",
+          "importance": "low"
+        },
+        {
+          "title": "美光股價下滑4% 助力空頭；英特爾空頭交易量最大：空頭追蹤 - Moomoo",
+          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNSjJrODMtUTNwSnhRQllMU0Z0NEE2QllVT3BaaE04Z0NJYnJrSTFHZ1ZUVWlPMFFGbEthU1lxdHp5dEY3YTFlZG53T2ZoYjhwVHBfR0hrNnU5RF93QmFuaTFKSXVFenhFWURiQ0ZNZEs3ckYxMEs0MDhaNmJmNGRNRDlYaWdvUzV4VzcyTXpYV1pWZmF4RlgyYk1xeHhIMnFuakJhTTRTYi1ZbE5WVG4zaTg0NFc?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 13:55:07 GMT",
+          "source": "Google News",
+          "keyword": "美光",
+          "importance": "low"
+        },
+        {
+          "title": "《美股》盼停戰+油價軟 美光激勵費半 太空股嗨-新聞內容-基金 - MoneyDJ理財網",
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQZjlnSG04ZVREbVpNSS1mckw4Yk5kUFRzWUV2N3d4UkpGM20xbzFPVDFtbVlYT2VvZjY0RkRvVWJ3WUhtM2t3MHptUHVFUmpZSFZQM2xaaVpwOUZsNGh1cTNjVS1hOWhwVy1BNkUtMkQtVEdLek12SjQzeXI5YVJRUGxFOTM5dHpVVW45TklVSWdlaUE?oc=5",
+          "pubDate": "Wed, 01 Apr 2026 23:16:00 GMT",
+          "source": "Google News",
+          "keyword": "美光",
+          "importance": "low"
+        },
+        {
+          "title": "美股三大指數集體收漲，納指漲超1%，美光科技、英特爾漲超8%，中概指數漲0.3% - AASTOCKS.com",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQZnV3WGVoc01BTWJIbmhkc1ZCQXhOa0pCcDRrWUxqNnJQeUVkZjhITlZMeXotQkVYTFNtM1pBTWRRekFxRnh4LXBJVHFyTkd5OThER2p5cU1STVhxQ3h2WVpKUWU5Tm9ZUzFqLU5ibXJtYUgzMDl2V1luWWFPUGY5NkxpWHRucDZ5?oc=5",
+          "pubDate": "Wed, 01 Apr 2026 22:08:00 GMT",
+          "source": "Google News",
+          "keyword": "美光",
+          "importance": "low"
+        },
+        {
+          "title": "美股連二彈！美光飆近9% 達里歐列最佳15檔 - 非凡新聞台",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFAxNjF4cUo4SlRxSWNfV2NVczByYWkzQmUxVm5pZXF1akZoTmZFMXNndndwQm9WTUNCVzdiN2dpZVlqUzAxdVVKa1RvSHJhOUkycGdqUV9CSGhPd1lDemNz?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 00:24:00 GMT",
+          "source": "Google News",
+          "keyword": "美光",
+          "importance": "low"
+        },
+        {
+          "title": "Erste Group因現金流擔憂下調美光科技股票評級 作者 Investing.com - Investing.com 香港 - 股市報價& 財經新聞",
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9qUE92c0NuOEJGRjR3QVF4aE40Z1R2d3doYUhfSlhudE94WDFlN1pTS29mQW4yV3Y5MEZGRnlVUTdHazZiNlpIMHNSYzlXM1NQQkpXWWpXNFdhZkFsVHBNSUhaS192QTZXeXZ3aEJGLWpobEZz?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 14:02:20 GMT",
+          "source": "Google News",
+          "keyword": "美光",
+          "importance": "low"
+        },
+        {
+          "title": "國發會：AI新十大建設聚焦3面向輝達、超微、美光來台投資助攻| 財經焦點 - 太報 TaiSounds",
+          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9iTVFmb0NwX0J0WHJ3eUFQam81OUpPQWhydUMzT1BNZktfWXlYc3VNRmoza0lrMVFFZ3Z6aXU4bnFLMFAyWHVtX2xOZmZOWkdSdDhVMHptYXNnT2VW?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 06:47:20 GMT",
+          "source": "Google News",
+          "keyword": "美光",
+          "importance": "high"
+        },
+        {
+          "title": "國發會3大面向推「AI新十大建設」 助輝達、AMD與美光來台設研發中心 - 壹蘋新聞網",
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOalR4UEVjNzJieXZNMmpKRnpJczdUd2ZDLUFvQmEwVTRDQVlIUDhWS1V0Q3BuNzFPUDRBaHotdl9velVfMjFwVXFHOGNpeGNZSng0N3gwTFNBSFktcWFBT3h5RWpmNW9CR1ByelpYSkpQSXRCa0NKRWRjVjRHXzdUMEdB?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 16:30:00 GMT",
+          "source": "Google News",
+          "keyword": "美光",
+          "importance": "low"
+        }
+      ]
+    },
+    {
+      "company": "Phison",
+      "count": 3,
+      "news": [
+        {
+          "title": "群聯推混合式AI架構，可降低企業AI使用成本- 新聞 - MoneyDJ理財網",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPYnlHczJpbG82cUZaRlhuaVdXeHltQzR3N201YlJEQjVtanMxVE5rTWN2SkhBdGVyenpRRDVYUTZVZE11cFdPR0tSVFNRTWdUM0dJVGpidkZHa0owb1hIUGNuOTlpV0hBYVNSSmVUM1BTeEFZc2Q5dTdralNibUhpeHI0YmlxaWVmNzlfMnpNNFRudw?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 02:26:00 GMT",
+          "source": "Google News",
+          "keyword": "群聯",
+          "importance": "low"
+        },
+        {
+          "title": "《法人機構上櫃賣超前20名2-2》群聯(-1,510)、MAG7+(-1,419) - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPajV0a3F4dXYtQktuQ05hajhVUEQ0VEFqYTF2Mkx2REZBX2lpZ05NLVRKUVQ0TzlaZ0hVM3ZPTmpYeU5KaHpHQkFIeXdsQ3pxMmliSVhQU0VjcktlV0hES1c3djBRT0Z5RWR2NFV3VHptY2RsYjREYkV3UkE4UHFPb0VHTUZyeDlX?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 08:02:00 GMT",
+          "source": "Google News",
+          "keyword": "群聯",
+          "importance": "low"
+        },
+        {
+          "title": "個股：中環(2323)3/30-4/1處分群聯股票190張，均價1612.79元，虧損2988萬元 - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcE5JVV8zczNrOURZMkw2OElLMWtiS2NQVmp6aVdKcW1RcExEQkhtd0R6Qzhlc0dFVGRDNmxHRVdOSHYtQUdiQ0xLN2R0Q0hhZ05NS20zWTYyUk9nZVpwVmlMYTR0bVJ4NFhDZzNwQTZENjZJUjVDVXhBdFNSOThKQmlOWlVFU1h2?oc=5",
+          "pubDate": "Wed, 01 Apr 2026 23:58:00 GMT",
+          "source": "Google News",
+          "keyword": "群聯",
+          "importance": "low"
+        }
+      ]
+    },
+    {
+      "company": "CapsoVision",
+      "count": 2,
+      "news": [
+        {
+          "title": "CV|CapsoVision Inc|價格:7.510|漲跌幅:-0.02 - TradingKey",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBLa1dhbGVhWnd3NG9EdjBwdmNzRzBDWXdFNndDUlRkWHpyWTloU3BrZnd0RHNpc2NzQk93SHJqbUZxa09jVFM5dndoQ1FXWDN1S3N6dnRrMHBEZlk0dW5Ucmp0TG93OC1heUtjdVFnSjY4RFpvSVpEM0J4ZlBTSEU?oc=5",
+          "pubDate": "Wed, 01 Apr 2026 21:31:21 GMT",
+          "source": "Google News",
+          "keyword": "CapsoVision",
+          "importance": "low"
+        },
+        {
+          "title": "CV|CapsoVision Inc|價格:6.630|漲跌幅:-0.53 - TradingKey",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBLa1dhbGVhWnd3NG9EdjBwdmNzRzBDWXdFNndDUlRkWHpyWTloU3BrZnd0RHNpc2NzQk93SHJqbUZxa09jVFM5dndoQ1FXWDN1S3N6dnRrMHBEZlk0dW5Ucmp0TG93OC1heUtjdVFnSjY4RFpvSVpEM0J4ZlBTSEU?oc=5",
+          "pubDate": "Wed, 01 Apr 2026 21:31:21 GMT",
+          "source": "Google News",
+          "keyword": "CapsoVision Inc",
+          "importance": "low"
+        }
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "company": "Micron",
+      "totalCount": 29,
+      "highCount": 9,
+      "mediumCount": 3,
+      "lowCount": 17,
+      "topNews": [
+        {
+          "title": "【21:30 即時新聞】Micron Technology(MU) 急挫逾7%／AI 記憶體需求前景再遭情緒性修正 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNUdrWjI1aW56ZGliYmw1cldtUW9ybDh3ZjNTSU5RSzVXYnRibW05QnpqdUlCN2dmendzQUZxT2F2eHFhb1ZMMF8xMjdvOWw1a1RGNHQ3a2JFQWdVWmpQYTlpay1DbmFZMDN2WDJZQV9GVmU2OURrX1N1NzJNa19VLXAzU1RDclF0aU82OTRB?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 13:30:32 GMT",
+          "source": "Google News",
+          "keyword": "Micron",
+          "importance": "high"
+        },
+        {
+          "title": "AI熱潮下的隱形贏家與受傷股：從Micron到Tesla、美股科技新局勢全面剖析 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQOGZHNUthR0I2RGthTWxFU0VNQ2NOUHYtRlFKcjlYSHM0aEQ0SmJ2LW45anFVMFUyVnZycjVlWEhFOWFFdDVyNXl4MXZvc3BXajB6bjQ5N09XVG92TjlzNUozMWo5SDBVRTJrczcxRW1QTm5hQ2szbnlBMkQxdDJiSUVDRWlkczRpYWZBZlVn?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 18:00:36 GMT",
+          "source": "Google News",
+          "keyword": "Micron",
+          "importance": "high"
+        },
+        {
+          "title": "【即時新聞】美光(MU)受地緣衝擊開盤重挫逾7%，AI新技術恐削弱記憶體需求！ - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNVVBDamNtM0l0TzhQVXI3ZEVWX083UlZCZ1YtVG1qUGVkM003N2FYRktrdDE0RHVTeDcxY1JSSS1KeWE2NGh1cGpKdVpIQTEybVZjR1lFOXBQTGJyT0xFa0o4OFAzSERHaTY0MXk5eFdVLVl1TEQ3YzVyV19kTmVqT3BHY1V1NTByMll5a2JfWEo?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 17:44:54 GMT",
+          "source": "Google News",
+          "keyword": "MU",
+          "importance": "high"
+        },
+        {
+          "title": "【即時新聞】美光(MU)遭花旗砍目標價至425美元，AI記憶體狂潮要反轉了？ - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOSkhuQklIR0RWMEpoMmNJVDUxR2planc2c3FjT0FlRWtfR2gzSS1kQ2JiR3VfMGNyQnpCOXFGQUtHTHc3anVRMWhOcVFEUUFWM0VTbm5tV1owYzlPYnNHUGM0cjI0dndhTkczZVZPWXBONzNMRGZkNnNFQTJidmktM3VaUFZyQ3hlZU5oMWpnVDU?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 18:45:50 GMT",
+          "source": "Google News",
+          "keyword": "MU",
+          "importance": "high"
+        },
+        {
+          "title": "【即時新聞】MU最新盤中爆量轉強飆逾9%，半年大漲101%還能追嗎？ - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNdUpGeEpaZ0MxdmhhWU9xSzRSWlFUUkgwWWpBcm80X0J6NlN4bmFRZmttRFNLV2pQeE03NDdtRU03VXdhNm5WVGVwY2djSDZzWFlGUTd5djlKd1NHZWNndjVIUk9ucEpTV0FkaUxJQW5FTTBhaklZUjVfRDhNZDBtN2JDZTVRS1YxQXNCb0VWMFY?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 14:16:59 GMT",
+          "source": "Google News",
+          "keyword": "MU",
+          "importance": "high"
+        },
+        {
+          "title": "【即時新聞】地緣政治趨緩帶動美光(MU)狂飆近9%！市場無懼Alphabet新AI技術衝擊 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPV2pPT0FWS2ZyUGJLcFpuYzZ4SnYzaUtkTzhiZWg4dGg4ZGFLNWI0NjRfWXVlU1Z4djdCTnpJTE1uNmFHUHlOLUlqb2hpaGVQLV8tQ0ZwQllTRDA3Y2ZLWVU3RDdDcnVwWWRhRnFHcmFRejlYUGdaSTFjRExDTFFCd2pDX0ZHNVo5MHEzWVk4Y3Q?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 01:49:17 GMT",
+          "source": "Google News",
+          "keyword": "MU",
+          "importance": "high"
+        },
+        {
+          "title": "美光狠砸1.4兆投資！ 助攻 AI 新十大建設政策 - 經濟日報",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA1cWRKV01iLTlKalhFbE10aWRHOVJyS0VEbFJJaXpodF9wTzZ3RDNkVFlqeWhMNElJcDlFVnc3akRjS1p1Zm00OFNBclowQnlpYXdheXpEVTM4QdIBX0FVX3lxTE1rRW9QZjNZQ0tocmJxWU5CVkNLNnAzNW5OZzl0ZHBNOW1ZUVBJUVpIaW12WXRpNlViNXUyOWJobW9ra3FRSWh6YXBUZkh3cU5pNUxGMXpNMG9LZHJ6QVJV?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 04:33:36 GMT",
+          "source": "Google News",
+          "keyword": "美光",
+          "importance": "high"
+        },
+        {
+          "title": "美光狠砸1.4兆投資！ 助攻 AI 新十大建設政策 - 聯合新聞網",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE13N1VTcUowb1QxcjBoOExIbE9CbWx3MlprQjhHdURGOWJQV29rc3JaV2t6WTJyNmtVZF9vU2RPSE5zTk1GQWlIUTRHTV9vbUpF0gFWQVVfeXFMTnFUa2VTVmpoNXprNU1ZN0VfalZfNjdySWkzLURLakxIbVdMbUptM2t3RjNfcFJBNl8zbktoWnBWQlpfZjJCbWQyTUsxdUxVemNnaHA4Y3c?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 04:33:31 GMT",
+          "source": "Google News",
+          "keyword": "美光",
+          "importance": "high"
+        },
+        {
+          "title": "國發會：AI新十大建設聚焦3面向輝達、超微、美光來台投資助攻| 財經焦點 - 太報 TaiSounds",
+          "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9iTVFmb0NwX0J0WHJ3eUFQam81OUpPQWhydUMzT1BNZktfWXlYc3VNRmoza0lrMVFFZ3Z6aXU4bnFLMFAyWHVtX2xOZmZOWkdSdDhVMHptYXNnT2VW?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 06:47:20 GMT",
+          "source": "Google News",
+          "keyword": "美光",
+          "importance": "high"
+        },
+        {
+          "title": "川普TACO交易逆轉？WTI原油、LME鋁、比特幣、美光科技（MU）技術分析 - mitrade.com",
+          "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1nMVFGNHdmak9uRTFYVG9nWERvSTRsSTV1cThtd3FKalI3dllFdmdMb0hPcFJmbTQydWdXMFJvRnpHOVFic0JWTFMyR0U1cjVpZTFGU2VYQS1QOUZwb0xlQnhmZ3N0dHgxbUpCVGhDeFZBWHBQQjVQbk5B?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 15:08:58 GMT",
+          "source": "Google News",
+          "keyword": "MU",
+          "importance": "medium"
+        }
+      ]
+    },
+    {
+      "company": "Phison",
+      "totalCount": 3,
+      "highCount": 0,
+      "mediumCount": 0,
+      "lowCount": 3,
+      "topNews": [
+        {
+          "title": "群聯推混合式AI架構，可降低企業AI使用成本- 新聞 - MoneyDJ理財網",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPYnlHczJpbG82cUZaRlhuaVdXeHltQzR3N201YlJEQjVtanMxVE5rTWN2SkhBdGVyenpRRDVYUTZVZE11cFdPR0tSVFNRTWdUM0dJVGpidkZHa0owb1hIUGNuOTlpV0hBYVNSSmVUM1BTeEFZc2Q5dTdralNibUhpeHI0YmlxaWVmNzlfMnpNNFRudw?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 02:26:00 GMT",
+          "source": "Google News",
+          "keyword": "群聯",
+          "importance": "low"
+        },
+        {
+          "title": "《法人機構上櫃賣超前20名2-2》群聯(-1,510)、MAG7+(-1,419) - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPajV0a3F4dXYtQktuQ05hajhVUEQ0VEFqYTF2Mkx2REZBX2lpZ05NLVRKUVQ0TzlaZ0hVM3ZPTmpYeU5KaHpHQkFIeXdsQ3pxMmliSVhQU0VjcktlV0hES1c3djBRT0Z5RWR2NFV3VHptY2RsYjREYkV3UkE4UHFPb0VHTUZyeDlX?oc=5",
+          "pubDate": "Thu, 02 Apr 2026 08:02:00 GMT",
+          "source": "Google News",
+          "keyword": "群聯",
+          "importance": "low"
+        },
+        {
+          "title": "個股：中環(2323)3/30-4/1處分群聯股票190張，均價1612.79元，虧損2988萬元 - 富聯網",
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcE5JVV8zczNrOURZMkw2OElLMWtiS2NQVmp6aVdKcW1RcExEQkhtd0R6Qzhlc0dFVGRDNmxHRVdOSHYtQUdiQ0xLN2R0Q0hhZ05NS20zWTYyUk9nZVpwVmlMYTR0bVJ4NFhDZzNwQTZENjZJUjVDVXhBdFNSOThKQmlOWlVFU1h2?oc=5",
+          "pubDate": "Wed, 01 Apr 2026 23:58:00 GMT",
+          "source": "Google News",
+          "keyword": "群聯",
+          "importance": "low"
+        }
+      ]
+    },
+    {
+      "company": "CapsoVision",
+      "totalCount": 2,
+      "highCount": 0,
+      "mediumCount": 0,
+      "lowCount": 2,
+      "topNews": [
+        {
+          "title": "CV|CapsoVision Inc|價格:7.510|漲跌幅:-0.02 - TradingKey",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBLa1dhbGVhWnd3NG9EdjBwdmNzRzBDWXdFNndDUlRkWHpyWTloU3BrZnd0RHNpc2NzQk93SHJqbUZxa09jVFM5dndoQ1FXWDN1S3N6dnRrMHBEZlk0dW5Ucmp0TG93OC1heUtjdVFnSjY4RFpvSVpEM0J4ZlBTSEU?oc=5",
+          "pubDate": "Wed, 01 Apr 2026 21:31:21 GMT",
+          "source": "Google News",
+          "keyword": "CapsoVision",
+          "importance": "low"
+        },
+        {
+          "title": "CV|CapsoVision Inc|價格:6.630|漲跌幅:-0.53 - TradingKey",
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBLa1dhbGVhWnd3NG9EdjBwdmNzRzBDWXdFNndDUlRkWHpyWTloU3BrZnd0RHNpc2NzQk93SHJqbUZxa09jVFM5dndoQ1FXWDN1S3N6dnRrMHBEZlk0dW5Ucmp0TG93OC1heUtjdVFnSjY4RFpvSVpEM0J4ZlBTSEU?oc=5",
+          "pubDate": "Wed, 01 Apr 2026 21:31:21 GMT",
+          "source": "Google News",
+          "keyword": "CapsoVision Inc",
+          "importance": "low"
+        }
+      ]
+    }
+  ]
+}

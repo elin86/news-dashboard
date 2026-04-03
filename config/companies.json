@@ -1,0 +1,20 @@
+[
+  {
+    "id": "micron",
+    "displayName": "Micron",
+    "keywords": ["Micron", "MU", "美光"],
+    "enabled": true
+  },
+  {
+    "id": "phison",
+    "displayName": "Phison",
+    "keywords": ["Phison", "群聯"],
+    "enabled": true
+  },
+  {
+    "id": "capsovision",
+    "displayName": "CapsoVision",
+    "keywords": ["CapsoVision", "CapsoVision Inc", "NASDAQ: CV"],
+    "enabled": true
+  }
+]

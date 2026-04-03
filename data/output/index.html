@@ -1,0 +1,1124 @@
+
+  <!DOCTYPE html>
+  <html lang="zh-Hant">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>24H News Dashboard</title>
+      <style>
+        :root {
+          --bg-1: #060816;
+          --bg-2: #0b1020;
+          --bg-3: #111827;
+          --card-bg: linear-gradient(180deg, rgba(22, 28, 58, 0.92) 0%, rgba(15, 20, 40, 0.92) 100%);
+          --card-border: rgba(255, 255, 255, 0.08);
+          --soft-border: rgba(255, 255, 255, 0.06);
+          --text-main: #f8fafc;
+          --text-body: #e5e7eb;
+          --text-muted: #94a3b8;
+          --link: #dbeafe;
+          --high-bg: rgba(239, 68, 68, 0.18);
+          --high-text: #f87171;
+          --medium-bg: rgba(245, 158, 11, 0.18);
+          --medium-text: #fbbf24;
+          --low-bg: rgba(148, 163, 184, 0.16);
+          --low-text: #cbd5e1;
+          --chip-bg: rgba(255, 255, 255, 0.06);
+          --chip-border: rgba(255, 255, 255, 0.09);
+          --chip-hover: rgba(147, 197, 253, 0.14);
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+
+        html {
+          scroll-behavior: smooth;
+        }
+
+        html, body {
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          color: var(--text-body);
+          min-height: 100vh;
+          background:
+            radial-gradient(circle at top left, rgba(56, 189, 248, 0.10), transparent 28%),
+            radial-gradient(circle at top right, rgba(99, 102, 241, 0.12), transparent 24%),
+            linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 55%, var(--bg-3) 100%);
+        }
+
+        .page {
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 36px 28px 48px;
+        }
+
+        .header {
+          margin-bottom: 22px;
+        }
+
+        .header-top {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 20px;
+          flex-wrap: wrap;
+        }
+
+        .eyebrow {
+          font-size: 13px;
+          color: #93c5fd;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          margin-bottom: 10px;
+        }
+
+        .page-title {
+          margin: 0 0 10px 0;
+          font-size: 52px;
+          line-height: 1.08;
+          color: var(--text-main);
+        }
+
+        .updated-time {
+          font-size: 16px;
+          color: var(--text-muted);
+        }
+
+        .kpi-row {
+          display: flex;
+          gap: 12px;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          padding-bottom: 4px;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+        }
+
+        .kpi-row::-webkit-scrollbar {
+          display: none;
+        }
+
+        .kpi-card {
+          flex: 0 0 auto;
+          min-width: 120px;
+          background: rgba(255, 255, 255, 0.06);
+          border: 1px solid var(--card-border);
+          padding: 12px 16px;
+          border-radius: 16px;
+          color: #e2e8f0;
+          box-shadow: 0 10px 24px rgba(0, 0, 0, 0.20);
+        }
+
+        .kpi-label {
+          font-size: 12px;
+          color: var(--text-muted);
+          margin-bottom: 4px;
+        }
+
+        .kpi-value {
+          font-size: 26px;
+          font-weight: 700;
+        }
+
+        .kpi-high {
+          color: var(--high-text);
+        }
+
+        .kpi-medium {
+          color: var(--medium-text);
+        }
+
+        .kpi-low {
+          color: var(--low-text);
+        }
+
+        .chip-row {
+          display: flex;
+          gap: 10px;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          padding: 6px 0 4px;
+          margin-bottom: 26px;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+        }
+
+        .chip-row::-webkit-scrollbar {
+          display: none;
+        }
+
+        .company-chip {
+          flex: 0 0 auto;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 10px 14px;
+          border-radius: 999px;
+          text-decoration: none;
+          color: #dbeafe;
+          background: var(--chip-bg);
+          border: 1px solid var(--chip-border);
+          font-size: 14px;
+          font-weight: 600;
+          transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .company-chip:hover {
+          background: var(--chip-hover);
+          border-color: rgba(147, 197, 253, 0.22);
+          transform: translateY(-1px);
+        }
+
+        .dashboard-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+          gap: 22px;
+          align-items: start;
+        }
+
+        .company-card {
+          background: var(--card-bg);
+          border: 1px solid var(--card-border);
+          border-radius: 22px;
+          padding: 22px;
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+          backdrop-filter: blur(10px);
+          scroll-margin-top: 24px;
+        }
+
+        .company-card-topline {
+          display: flex;
+          justify-content: flex-end;
+          margin-bottom: 10px;
+        }
+
+        .jump-top {
+          font-size: 12px;
+          color: #93c5fd;
+          text-decoration: none;
+          background: rgba(147, 197, 253, 0.08);
+          border: 1px solid rgba(147, 197, 253, 0.14);
+          padding: 6px 10px;
+          border-radius: 999px;
+          transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .jump-top:hover {
+          background: rgba(147, 197, 253, 0.16);
+          transform: translateY(-1px);
+        }
+
+        .company-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 16px;
+          margin-bottom: 18px;
+        }
+
+        .company-title {
+          margin: 0 0 8px 0;
+          font-size: 32px;
+          color: var(--text-main);
+          letter-spacing: 0.2px;
+        }
+
+        .company-subtitle {
+          color: var(--text-muted);
+          font-size: 14px;
+        }
+
+        .company-total {
+          min-width: 92px;
+          text-align: right;
+          color: var(--low-text);
+          font-size: 13px;
+        }
+
+        .company-total-label {
+          opacity: 0.75;
+        }
+
+        .company-total-value {
+          font-size: 28px;
+          font-weight: 700;
+          color: #ffffff;
+        }
+
+        .company-stats {
+          display: flex;
+          gap: 10px;
+          flex-wrap: wrap;
+          margin-bottom: 18px;
+        }
+
+        .stat-pill {
+          padding: 10px 14px;
+          border-radius: 14px;
+          font-size: 13px;
+          border: 1px solid transparent;
+        }
+
+        .stat-pill-high {
+          background: rgba(239, 68, 68, 0.12);
+          color: #fecaca;
+          border-color: rgba(239, 68, 68, 0.15);
+        }
+
+        .stat-pill-medium {
+          background: rgba(245, 158, 11, 0.12);
+          color: #fde68a;
+          border-color: rgba(245, 158, 11, 0.15);
+        }
+
+        .stat-pill-low {
+          background: rgba(148, 163, 184, 0.12);
+          color: #e2e8f0;
+          border-color: rgba(148, 163, 184, 0.15);
+        }
+
+        .news-list {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .news-item {
+          padding: 14px 16px;
+          border-radius: 14px;
+          background: rgba(9, 14, 32, 0.72);
+          border: 1px solid var(--soft-border);
+        }
+
+        .news-item-top {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          gap: 12px;
+        }
+
+        .news-link {
+          color: var(--link);
+          text-decoration: none;
+          font-size: 15px;
+          line-height: 1.6;
+          font-weight: 500;
+          flex: 1;
+          word-break: break-word;
+        }
+
+        .news-link:hover {
+          text-decoration: underline;
+        }
+
+        .news-meta {
+          margin-top: 10px;
+          font-size: 12px;
+          color: var(--text-muted);
+          display: flex;
+          gap: 10px;
+          flex-wrap: wrap;
+        }
+
+        .badge {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 4px 10px;
+          border-radius: 999px;
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: 0.2px;
+          white-space: nowrap;
+          flex: 0 0 auto;
+        }
+
+        .badge-high {
+          background: var(--high-bg);
+          color: var(--high-text);
+          border: 1px solid rgba(239, 68, 68, 0.25);
+        }
+
+        .badge-medium {
+          background: var(--medium-bg);
+          color: var(--medium-text);
+          border: 1px solid rgba(245, 158, 11, 0.25);
+        }
+
+        .badge-low {
+          background: var(--low-bg);
+          color: var(--low-text);
+          border: 1px solid rgba(148, 163, 184, 0.22);
+        }
+
+        .desktop-only {
+          display: block;
+        }
+
+        .desktop-hidden {
+          display: none;
+        }
+
+        .mobile-expand {
+          margin-top: 2px;
+          border-radius: 14px;
+          background: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.06);
+          overflow: hidden;
+        }
+
+        .mobile-expand summary {
+          list-style: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          font-size: 14px;
+          font-weight: 600;
+          color: #cbd5e1;
+          user-select: none;
+        }
+
+        .mobile-expand summary::-webkit-details-marker {
+          display: none;
+        }
+
+        .mobile-expand summary::after {
+          content: "▾";
+          float: right;
+          color: #94a3b8;
+          transition: transform 0.2s ease;
+        }
+
+        .mobile-expand[open] summary::after {
+          transform: rotate(180deg);
+        }
+
+        .expanded-news {
+          padding: 0 12px 12px;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        @media (max-width: 1024px) {
+          .page {
+            padding: 28px 18px 36px;
+          }
+
+          .page-title {
+            font-size: 44px;
+          }
+
+          .dashboard-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .page {
+            padding: 20px 14px 28px;
+          }
+
+          .header {
+            margin-bottom: 18px;
+          }
+
+          .header-top {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 18px;
+          }
+
+          .page-title {
+            font-size: 36px;
+            line-height: 1.1;
+            margin-bottom: 8px;
+          }
+
+          .updated-time {
+            font-size: 14px;
+          }
+
+          .kpi-card {
+            min-width: 112px;
+            padding: 12px 14px;
+            border-radius: 14px;
+          }
+
+          .chip-row {
+            margin-bottom: 20px;
+            gap: 8px;
+          }
+
+          .company-chip {
+            padding: 9px 12px;
+            font-size: 13px;
+          }
+
+          .company-card {
+            padding: 16px;
+            border-radius: 18px;
+          }
+
+          .company-card-topline {
+            margin-bottom: 8px;
+          }
+
+          .jump-top {
+            font-size: 11px;
+            padding: 5px 9px;
+          }
+
+          .company-header {
+            margin-bottom: 14px;
+          }
+
+          .company-title {
+            font-size: 24px;
+            margin-bottom: 6px;
+          }
+
+          .company-subtitle {
+            font-size: 13px;
+          }
+
+          .company-total {
+            min-width: auto;
+          }
+
+          .company-total-value {
+            font-size: 24px;
+          }
+
+          .company-stats {
+            gap: 8px;
+            margin-bottom: 14px;
+          }
+
+          .stat-pill {
+            padding: 8px 12px;
+            font-size: 12px;
+            border-radius: 12px;
+          }
+
+          .news-item {
+            padding: 12px;
+            border-radius: 12px;
+          }
+
+          .news-item-top {
+            flex-direction: column;
+            gap: 10px;
+          }
+
+          .news-link {
+            font-size: 15px;
+            line-height: 1.5;
+          }
+
+          .news-meta {
+            margin-top: 8px;
+            font-size: 11px;
+            gap: 8px;
+          }
+
+          .badge {
+            align-self: flex-start;
+            font-size: 11px;
+            padding: 4px 9px;
+          }
+
+          .desktop-only {
+            display: none;
+          }
+
+          .desktop-hidden {
+            display: block;
+          }
+        }
+      </style>
+    </head>
+
+    <body id="top">
+      <div class="page">
+        <header class="header">
+          <div class="header-top">
+            <div>
+              <div class="eyebrow">24-hour market news monitor</div>
+              <h1 class="page-title">24H News Summary</h1>
+              <div class="updated-time">Updated: 2026/4/3 上午4:00:05</div>
+            </div>
+
+            <div class="kpi-row">
+              <div class="kpi-card">
+                <div class="kpi-label">High</div>
+                <div class="kpi-value kpi-high">9</div>
+              </div>
+
+              <div class="kpi-card">
+                <div class="kpi-label">Medium</div>
+                <div class="kpi-value kpi-medium">3</div>
+              </div>
+
+              <div class="kpi-card">
+                <div class="kpi-label">Low</div>
+                <div class="kpi-value kpi-low">22</div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <nav class="chip-row">
+          
+          <a class="company-chip" href="#company-micron">
+            Micron
+          </a>
+        
+          <a class="company-chip" href="#company-phison">
+            Phison
+          </a>
+        
+          <a class="company-chip" href="#company-capsovision">
+            CapsoVision
+          </a>
+        
+        </nav>
+
+        <main class="dashboard-grid">
+          
+      <section class="company-card" id="company-micron">
+        <div class="company-card-topline">
+          <a class="jump-top" href="#top">↑ Jump to top</a>
+        </div>
+
+        <div class="company-header">
+          <div>
+            <h2 class="company-title">Micron</h2>
+            <div class="company-subtitle">
+              Top 10 selected stories
+            </div>
+          </div>
+
+          <div class="company-total">
+            <div class="company-total-label">Total</div>
+            <div class="company-total-value">29</div>
+          </div>
+        </div>
+
+        <div class="company-stats">
+          <div class="stat-pill stat-pill-high">High: <b>9</b></div>
+          <div class="stat-pill stat-pill-medium">Medium: <b>3</b></div>
+          <div class="stat-pill stat-pill-low">Low: <b>17</b></div>
+        </div>
+
+        <div class="news-list">
+          
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMijgFBVV95cUxNNUdrWjI1aW56ZGliYmw1cldtUW9ybDh3ZjNTSU5RSzVXYnRibW05QnpqdUlCN2dmendzQUZxT2F2eHFhb1ZMMF8xMjdvOWw1a1RGNHQ3a2JFQWdVWmpQYTlpay1DbmFZMDN2WDJZQV9GVmU2OURrX1N1NzJNa19VLXAzU1RDclF0aU82OTRB?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            【21:30 即時新聞】Micron Technology(MU) 急挫逾7%／AI 記憶體需求前景再遭情緒性修正 - CMoney投資網誌
+          </a>
+          <span class="badge badge-high">HIGH</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Thu, 02 Apr 2026 13:30:32 GMT</span>
+        </div>
+      </article>
+    
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMijgFBVV95cUxQOGZHNUthR0I2RGthTWxFU0VNQ2NOUHYtRlFKcjlYSHM0aEQ0SmJ2LW45anFVMFUyVnZycjVlWEhFOWFFdDVyNXl4MXZvc3BXajB6bjQ5N09XVG92TjlzNUozMWo5SDBVRTJrczcxRW1QTm5hQ2szbnlBMkQxdDJiSUVDRWlkczRpYWZBZlVn?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            AI熱潮下的隱形贏家與受傷股：從Micron到Tesla、美股科技新局勢全面剖析 - CMoney投資網誌
+          </a>
+          <span class="badge badge-high">HIGH</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Thu, 02 Apr 2026 18:00:36 GMT</span>
+        </div>
+      </article>
+    
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNVVBDamNtM0l0TzhQVXI3ZEVWX083UlZCZ1YtVG1qUGVkM003N2FYRktrdDE0RHVTeDcxY1JSSS1KeWE2NGh1cGpKdVpIQTEybVZjR1lFOXBQTGJyT0xFa0o4OFAzSERHaTY0MXk5eFdVLVl1TEQ3YzVyV19kTmVqT3BHY1V1NTByMll5a2JfWEo?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            【即時新聞】美光(MU)受地緣衝擊開盤重挫逾7%，AI新技術恐削弱記憶體需求！ - CMoney投資網誌
+          </a>
+          <span class="badge badge-high">HIGH</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Thu, 02 Apr 2026 17:44:54 GMT</span>
+        </div>
+      </article>
+    
+          
+        <div class="desktop-only">
+          
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMikAFBVV95cUxOSkhuQklIR0RWMEpoMmNJVDUxR2planc2c3FjT0FlRWtfR2gzSS1kQ2JiR3VfMGNyQnpCOXFGQUtHTHc3anVRMWhOcVFEUUFWM0VTbm5tV1owYzlPYnNHUGM0cjI0dndhTkczZVZPWXBONzNMRGZkNnNFQTJidmktM3VaUFZyQ3hlZU5oMWpnVDU?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            【即時新聞】美光(MU)遭花旗砍目標價至425美元，AI記憶體狂潮要反轉了？ - CMoney投資網誌
+          </a>
+          <span class="badge badge-high">HIGH</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Thu, 02 Apr 2026 18:45:50 GMT</span>
+        </div>
+      </article>
+    
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNdUpGeEpaZ0MxdmhhWU9xSzRSWlFUUkgwWWpBcm80X0J6NlN4bmFRZmttRFNLV2pQeE03NDdtRU03VXdhNm5WVGVwY2djSDZzWFlGUTd5djlKd1NHZWNndjVIUk9ucEpTV0FkaUxJQW5FTTBhaklZUjVfRDhNZDBtN2JDZTVRS1YxQXNCb0VWMFY?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            【即時新聞】MU最新盤中爆量轉強飆逾9%，半年大漲101%還能追嗎？ - CMoney投資網誌
+          </a>
+          <span class="badge badge-high">HIGH</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Thu, 02 Apr 2026 14:16:59 GMT</span>
+        </div>
+      </article>
+    
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMikAFBVV95cUxPV2pPT0FWS2ZyUGJLcFpuYzZ4SnYzaUtkTzhiZWg4dGg4ZGFLNWI0NjRfWXVlU1Z4djdCTnpJTE1uNmFHUHlOLUlqb2hpaGVQLV8tQ0ZwQllTRDA3Y2ZLWVU3RDdDcnVwWWRhRnFHcmFRejlYUGdaSTFjRExDTFFCd2pDX0ZHNVo5MHEzWVk4Y3Q?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            【即時新聞】地緣政治趨緩帶動美光(MU)狂飆近9%！市場無懼Alphabet新AI技術衝擊 - CMoney投資網誌
+          </a>
+          <span class="badge badge-high">HIGH</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Thu, 02 Apr 2026 01:49:17 GMT</span>
+        </div>
+      </article>
+    
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFA1cWRKV01iLTlKalhFbE10aWRHOVJyS0VEbFJJaXpodF9wTzZ3RDNkVFlqeWhMNElJcDlFVnc3akRjS1p1Zm00OFNBclowQnlpYXdheXpEVTM4QdIBX0FVX3lxTE1rRW9QZjNZQ0tocmJxWU5CVkNLNnAzNW5OZzl0ZHBNOW1ZUVBJUVpIaW12WXRpNlViNXUyOWJobW9ra3FRSWh6YXBUZkh3cU5pNUxGMXpNMG9LZHJ6QVJV?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            美光狠砸1.4兆投資！ 助攻 AI 新十大建設政策 - 經濟日報
+          </a>
+          <span class="badge badge-high">HIGH</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Thu, 02 Apr 2026 04:33:36 GMT</span>
+        </div>
+      </article>
+    
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE13N1VTcUowb1QxcjBoOExIbE9CbWx3MlprQjhHdURGOWJQV29rc3JaV2t6WTJyNmtVZF9vU2RPSE5zTk1GQWlIUTRHTV9vbUpF0gFWQVVfeXFMTnFUa2VTVmpoNXprNU1ZN0VfalZfNjdySWkzLURLakxIbVdMbUptM2t3RjNfcFJBNl8zbktoWnBWQlpfZjJCbWQyTUsxdUxVemNnaHA4Y3c?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            美光狠砸1.4兆投資！ 助攻 AI 新十大建設政策 - 聯合新聞網
+          </a>
+          <span class="badge badge-high">HIGH</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Thu, 02 Apr 2026 04:33:31 GMT</span>
+        </div>
+      </article>
+    
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE9iTVFmb0NwX0J0WHJ3eUFQam81OUpPQWhydUMzT1BNZktfWXlYc3VNRmoza0lrMVFFZ3Z6aXU4bnFLMFAyWHVtX2xOZmZOWkdSdDhVMHptYXNnT2VW?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            國發會：AI新十大建設聚焦3面向輝達、超微、美光來台投資助攻| 財經焦點 - 太報 TaiSounds
+          </a>
+          <span class="badge badge-high">HIGH</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Thu, 02 Apr 2026 06:47:20 GMT</span>
+        </div>
+      </article>
+    
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMiekFVX3lxTE1nMVFGNHdmak9uRTFYVG9nWERvSTRsSTV1cThtd3FKalI3dllFdmdMb0hPcFJmbTQydWdXMFJvRnpHOVFic0JWTFMyR0U1cjVpZTFGU2VYQS1QOUZwb0xlQnhmZ3N0dHgxbUpCVGhDeFZBWHBQQjVQbk5B?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            川普TACO交易逆轉？WTI原油、LME鋁、比特幣、美光科技（MU）技術分析 - mitrade.com
+          </a>
+          <span class="badge badge-medium">MEDIUM</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Thu, 02 Apr 2026 15:08:58 GMT</span>
+        </div>
+      </article>
+    
+        </div>
+      
+          
+        <details class="mobile-expand desktop-hidden">
+          <summary>
+            Show more (7)
+          </summary>
+          <div class="expanded-news">
+            
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMikAFBVV95cUxOSkhuQklIR0RWMEpoMmNJVDUxR2planc2c3FjT0FlRWtfR2gzSS1kQ2JiR3VfMGNyQnpCOXFGQUtHTHc3anVRMWhOcVFEUUFWM0VTbm5tV1owYzlPYnNHUGM0cjI0dndhTkczZVZPWXBONzNMRGZkNnNFQTJidmktM3VaUFZyQ3hlZU5oMWpnVDU?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            【即時新聞】美光(MU)遭花旗砍目標價至425美元，AI記憶體狂潮要反轉了？ - CMoney投資網誌
+          </a>
+          <span class="badge badge-high">HIGH</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Thu, 02 Apr 2026 18:45:50 GMT</span>
+        </div>
+      </article>
+    
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNdUpGeEpaZ0MxdmhhWU9xSzRSWlFUUkgwWWpBcm80X0J6NlN4bmFRZmttRFNLV2pQeE03NDdtRU03VXdhNm5WVGVwY2djSDZzWFlGUTd5djlKd1NHZWNndjVIUk9ucEpTV0FkaUxJQW5FTTBhaklZUjVfRDhNZDBtN2JDZTVRS1YxQXNCb0VWMFY?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            【即時新聞】MU最新盤中爆量轉強飆逾9%，半年大漲101%還能追嗎？ - CMoney投資網誌
+          </a>
+          <span class="badge badge-high">HIGH</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Thu, 02 Apr 2026 14:16:59 GMT</span>
+        </div>
+      </article>
+    
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMikAFBVV95cUxPV2pPT0FWS2ZyUGJLcFpuYzZ4SnYzaUtkTzhiZWg4dGg4ZGFLNWI0NjRfWXVlU1Z4djdCTnpJTE1uNmFHUHlOLUlqb2hpaGVQLV8tQ0ZwQllTRDA3Y2ZLWVU3RDdDcnVwWWRhRnFHcmFRejlYUGdaSTFjRExDTFFCd2pDX0ZHNVo5MHEzWVk4Y3Q?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            【即時新聞】地緣政治趨緩帶動美光(MU)狂飆近9%！市場無懼Alphabet新AI技術衝擊 - CMoney投資網誌
+          </a>
+          <span class="badge badge-high">HIGH</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Thu, 02 Apr 2026 01:49:17 GMT</span>
+        </div>
+      </article>
+    
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFA1cWRKV01iLTlKalhFbE10aWRHOVJyS0VEbFJJaXpodF9wTzZ3RDNkVFlqeWhMNElJcDlFVnc3akRjS1p1Zm00OFNBclowQnlpYXdheXpEVTM4QdIBX0FVX3lxTE1rRW9QZjNZQ0tocmJxWU5CVkNLNnAzNW5OZzl0ZHBNOW1ZUVBJUVpIaW12WXRpNlViNXUyOWJobW9ra3FRSWh6YXBUZkh3cU5pNUxGMXpNMG9LZHJ6QVJV?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            美光狠砸1.4兆投資！ 助攻 AI 新十大建設政策 - 經濟日報
+          </a>
+          <span class="badge badge-high">HIGH</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Thu, 02 Apr 2026 04:33:36 GMT</span>
+        </div>
+      </article>
+    
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE13N1VTcUowb1QxcjBoOExIbE9CbWx3MlprQjhHdURGOWJQV29rc3JaV2t6WTJyNmtVZF9vU2RPSE5zTk1GQWlIUTRHTV9vbUpF0gFWQVVfeXFMTnFUa2VTVmpoNXprNU1ZN0VfalZfNjdySWkzLURLakxIbVdMbUptM2t3RjNfcFJBNl8zbktoWnBWQlpfZjJCbWQyTUsxdUxVemNnaHA4Y3c?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            美光狠砸1.4兆投資！ 助攻 AI 新十大建設政策 - 聯合新聞網
+          </a>
+          <span class="badge badge-high">HIGH</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Thu, 02 Apr 2026 04:33:31 GMT</span>
+        </div>
+      </article>
+    
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE9iTVFmb0NwX0J0WHJ3eUFQam81OUpPQWhydUMzT1BNZktfWXlYc3VNRmoza0lrMVFFZ3Z6aXU4bnFLMFAyWHVtX2xOZmZOWkdSdDhVMHptYXNnT2VW?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            國發會：AI新十大建設聚焦3面向輝達、超微、美光來台投資助攻| 財經焦點 - 太報 TaiSounds
+          </a>
+          <span class="badge badge-high">HIGH</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Thu, 02 Apr 2026 06:47:20 GMT</span>
+        </div>
+      </article>
+    
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMiekFVX3lxTE1nMVFGNHdmak9uRTFYVG9nWERvSTRsSTV1cThtd3FKalI3dllFdmdMb0hPcFJmbTQydWdXMFJvRnpHOVFic0JWTFMyR0U1cjVpZTFGU2VYQS1QOUZwb0xlQnhmZ3N0dHgxbUpCVGhDeFZBWHBQQjVQbk5B?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            川普TACO交易逆轉？WTI原油、LME鋁、比特幣、美光科技（MU）技術分析 - mitrade.com
+          </a>
+          <span class="badge badge-medium">MEDIUM</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Thu, 02 Apr 2026 15:08:58 GMT</span>
+        </div>
+      </article>
+    
+          </div>
+        </details>
+      
+        </div>
+      </section>
+    
+      <section class="company-card" id="company-phison">
+        <div class="company-card-topline">
+          <a class="jump-top" href="#top">↑ Jump to top</a>
+        </div>
+
+        <div class="company-header">
+          <div>
+            <h2 class="company-title">Phison</h2>
+            <div class="company-subtitle">
+              Top 3 selected stories
+            </div>
+          </div>
+
+          <div class="company-total">
+            <div class="company-total-label">Total</div>
+            <div class="company-total-value">3</div>
+          </div>
+        </div>
+
+        <div class="company-stats">
+          <div class="stat-pill stat-pill-high">High: <b>0</b></div>
+          <div class="stat-pill stat-pill-medium">Medium: <b>0</b></div>
+          <div class="stat-pill stat-pill-low">Low: <b>3</b></div>
+        </div>
+
+        <div class="news-list">
+          
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMikgFBVV95cUxPYnlHczJpbG82cUZaRlhuaVdXeHltQzR3N201YlJEQjVtanMxVE5rTWN2SkhBdGVyenpRRDVYUTZVZE11cFdPR0tSVFNRTWdUM0dJVGpidkZHa0owb1hIUGNuOTlpV0hBYVNSSmVUM1BTeEFZc2Q5dTdralNibUhpeHI0YmlxaWVmNzlfMnpNNFRudw?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            群聯推混合式AI架構，可降低企業AI使用成本- 新聞 - MoneyDJ理財網
+          </a>
+          <span class="badge badge-low">LOW</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Thu, 02 Apr 2026 02:26:00 GMT</span>
+        </div>
+      </article>
+    
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPajV0a3F4dXYtQktuQ05hajhVUEQ0VEFqYTF2Mkx2REZBX2lpZ05NLVRKUVQ0TzlaZ0hVM3ZPTmpYeU5KaHpHQkFIeXdsQ3pxMmliSVhQU0VjcktlV0hES1c3djBRT0Z5RWR2NFV3VHptY2RsYjREYkV3UkE4UHFPb0VHTUZyeDlX?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            《法人機構上櫃賣超前20名2-2》群聯(-1,510)、MAG7+(-1,419) - 富聯網
+          </a>
+          <span class="badge badge-low">LOW</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Thu, 02 Apr 2026 08:02:00 GMT</span>
+        </div>
+      </article>
+    
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxOcE5JVV8zczNrOURZMkw2OElLMWtiS2NQVmp6aVdKcW1RcExEQkhtd0R6Qzhlc0dFVGRDNmxHRVdOSHYtQUdiQ0xLN2R0Q0hhZ05NS20zWTYyUk9nZVpwVmlMYTR0bVJ4NFhDZzNwQTZENjZJUjVDVXhBdFNSOThKQmlOWlVFU1h2?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            個股：中環(2323)3/30-4/1處分群聯股票190張，均價1612.79元，虧損2988萬元 - 富聯網
+          </a>
+          <span class="badge badge-low">LOW</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Wed, 01 Apr 2026 23:58:00 GMT</span>
+        </div>
+      </article>
+    
+          
+          
+        </div>
+      </section>
+    
+      <section class="company-card" id="company-capsovision">
+        <div class="company-card-topline">
+          <a class="jump-top" href="#top">↑ Jump to top</a>
+        </div>
+
+        <div class="company-header">
+          <div>
+            <h2 class="company-title">CapsoVision</h2>
+            <div class="company-subtitle">
+              Top 2 selected stories
+            </div>
+          </div>
+
+          <div class="company-total">
+            <div class="company-total-label">Total</div>
+            <div class="company-total-value">2</div>
+          </div>
+        </div>
+
+        <div class="company-stats">
+          <div class="stat-pill stat-pill-high">High: <b>0</b></div>
+          <div class="stat-pill stat-pill-medium">Medium: <b>0</b></div>
+          <div class="stat-pill stat-pill-low">Low: <b>2</b></div>
+        </div>
+
+        <div class="news-list">
+          
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMif0FVX3lxTFBLa1dhbGVhWnd3NG9EdjBwdmNzRzBDWXdFNndDUlRkWHpyWTloU3BrZnd0RHNpc2NzQk93SHJqbUZxa09jVFM5dndoQ1FXWDN1S3N6dnRrMHBEZlk0dW5Ucmp0TG93OC1heUtjdVFnSjY4RFpvSVpEM0J4ZlBTSEU?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            CV|CapsoVision Inc|價格:7.510|漲跌幅:-0.02 - TradingKey
+          </a>
+          <span class="badge badge-low">LOW</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Wed, 01 Apr 2026 21:31:21 GMT</span>
+        </div>
+      </article>
+    
+      <article class="news-item">
+        <div class="news-item-top">
+          <a
+            class="news-link"
+            href="https://news.google.com/rss/articles/CBMif0FVX3lxTFBLa1dhbGVhWnd3NG9EdjBwdmNzRzBDWXdFNndDUlRkWHpyWTloU3BrZnd0RHNpc2NzQk93SHJqbUZxa09jVFM5dndoQ1FXWDN1S3N6dnRrMHBEZlk0dW5Ucmp0TG93OC1heUtjdVFnSjY4RFpvSVpEM0J4ZlBTSEU?oc=5"
+            target="_blank"
+            rel="noreferrer"
+          >
+            CV|CapsoVision Inc|價格:6.630|漲跌幅:-0.53 - TradingKey
+          </a>
+          <span class="badge badge-low">LOW</span>
+        </div>
+
+        <div class="news-meta">
+          <span>Google News</span>
+          <span>Wed, 01 Apr 2026 21:31:21 GMT</span>
+        </div>
+      </article>
+    
+          
+          
+        </div>
+      </section>
+    
+        </main>
+      </div>
+    </body>
+  </html>
+  
